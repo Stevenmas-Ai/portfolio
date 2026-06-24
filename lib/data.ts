@@ -315,9 +315,6 @@ export const navLinks = [
   { href: "#hackathons", label: "Hackathons" },
   { href: "#experience", label: "Experience" },
   { href: "#education", label: "Education" },
-  { href: "#publications", label: "Publications" },
-  { href: "#awards", label: "Awards" },
   { href: "#skills", label: "Skills" },
-  { href: "#volunteering", label: "Volunteering" },
   { href: "#contact", label: "Contact" },
 ];
