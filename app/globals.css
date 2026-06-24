@@ -1,0 +1,252 @@
+@import "tailwindcss";
+
+:root {
+  --accent: #4f46e5;
+  --accent-soft: rgba(79, 70, 229, 0.08);
+  --accent-softer: rgba(79, 70, 229, 0.14);
+  --bg: #faf9f7;
+  --ink: #1c1a16;
+  --section-pad: 104px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-manrope), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--accent-softer);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---------- Layout containers ---------- */
+.shell {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.section-title {
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+/* ---------- Nav ---------- */
+.nav-link {
+  transition: color 0.2s;
+}
+.nav-link:hover {
+  color: #1c1a16;
+}
+.resume-btn {
+  transition: filter 0.2s;
+}
+.resume-btn:hover {
+  filter: brightness(1.08);
+}
+
+/* ---------- Hero ---------- */
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: 56px;
+  align-items: center;
+}
+.hero-title {
+  text-wrap: balance;
+}
+
+.btn {
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition:
+    filter 0.2s,
+    border-color 0.2s;
+}
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+.btn-primary:hover {
+  filter: brightness(1.08);
+}
+.btn-ghost {
+  background: #fff;
+  border: 1px solid #e2ded7;
+  color: #1c1a16;
+}
+.btn-ghost:hover {
+  border-color: #cfc9bf;
+}
+
+/* ---------- Card grids ---------- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.project-card {
+  background: #fff;
+  border: 1px solid #ece9e3;
+  border-radius: 16px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition:
+    box-shadow 0.3s,
+    transform 0.3s,
+    border-color 0.3s;
+}
+.project-card:hover {
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  border-color: var(--accent);
+}
+
+.skill-card,
+.info-card {
+  background: #fff;
+  border: 1px solid #ece9e3;
+  border-radius: 16px;
+  padding: 26px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+/* ---------- View GitHub button ---------- */
+.gh-btn {
+  transition: filter 0.2s;
+}
+.gh-btn:hover {
+  filter: brightness(1.4);
+}
+
+/* ---------- Publications card ---------- */
+.pub-card {
+  display: block;
+  background: #fff;
+  border: 1px solid #ece9e3;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s;
+}
+.pub-card:hover {
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+  border-color: var(--accent);
+}
+
+/* ---------- Certification card (clickable) ---------- */
+.cert-card {
+  transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s;
+}
+.cert-card:hover {
+  box-shadow: 0 12px 28px rgba(79, 70, 229, 0.18);
+  transform: translateY(-3px);
+  border-color: var(--accent);
+}
+
+/* ---------- Timeline ---------- */
+.timeline-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0 36px;
+}
+
+/* ---------- Education ---------- */
+.edu-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* ---------- Contact ---------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 48px;
+  align-items: start;
+  margin-top: 40px;
+}
+.contact-link {
+  transition: color 0.2s;
+}
+.contact-link:hover {
+  color: #fff;
+}
+.send-btn {
+  transition: filter 0.2s;
+}
+.send-btn:hover {
+  filter: brightness(1.1);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  :root {
+    --section-pad: 72px;
+  }
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .hero-title {
+    font-size: 42px;
+  }
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+  .edu-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .contact-title {
+    font-size: 32px;
+  }
+  .contact-card {
+    padding: 40px 28px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .shell {
+    padding: 0 22px;
+  }
+  .nav-links {
+    gap: 16px !important;
+    overflow-x: auto;
+  }
+  .hero-title {
+    font-size: 36px;
+  }
+}
