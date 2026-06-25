@@ -58,7 +58,7 @@ export async function POST(request: Request) {
   try {
     await resend.emails.send({
       from: process.env.CONTACT_FROM_EMAIL || "onboarding@resend.dev",
-      to: process.env.CONTACT_TO_EMAIL || "stevengmascarenhas@gmail.com",
+      to: process.env.CONTACT_TO_EMAIL || "stevenmasdev@gmail.com",
       replyTo: email,
       subject: `Portfolio contact from ${name}`,
       html: `

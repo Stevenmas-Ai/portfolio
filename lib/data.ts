@@ -13,7 +13,7 @@ export const profile = {
     "Software engineer with an MSc in AI & ML, building software, LLM workflows, REST API integrations, RAG pipelines and cloud-deployed models on AWS. I turn research-grade ideas into shipped, monitored, full-stack products with a collaborative, build-fast mindset.",
   availability: "Open to AI / ML & Software Engineering roles",
   location: "Dublin, Ireland",
-  email: "stevengmascarenhas@gmail.com",
+  email: "stevenmasdev@gmail.com",
   github: "github.com/Stevenmas-Ai",
   githubUrl: "https://github.com/Stevenmas-Ai",
   linkedin: "linkedin.com/in/steven-mas",
