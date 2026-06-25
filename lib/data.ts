@@ -42,7 +42,7 @@ export const projects: Project[] = [
     title: "End-to-End AI Medical Chatbot",
     date: "Mar 2026",
     cover: "/assets/cover-medical.png",
-    link: "https://github.com/Stevenmas-Ai",
+    link: "https://github.com/Stevenmas-Ai/AI-Medical-Chatbot-LLMs-RAG-LangChain-Pinecone-FastAPI-React-Docker-Terraform-langsmith-CI-CD-AWS",
     bullets: [
       "Built a production RAG pipeline over a 637-page medical corpus (5,800+ chunks, HuggingFace embeddings, Pinecone vector store) with reranking, serving real-time responses with FastAPI and React across Groq LLaMA 3.1 and OpenAI GPT-4o, containerised with Docker/ECR and deployed to AWS EC2 with Terraform and GitHub CI/CD.",
       "Evaluated and monitored the pipeline with LangSmith, scoring 100% on four LLM-as-judge metrics, with request tracing for latency, token usage, and cost.",
@@ -57,7 +57,7 @@ export const projects: Project[] = [
     title: "Skin Lesion Classification for Skin Cancer Detection",
     date: "May 2025",
     cover: "/assets/cover-skin.png",
-    link: "https://github.com/Stevenmas-Ai",
+    link: "https://github.com/Stevenmas-Ai/Cloud-Based-Skin-Cancer-Detection-Using-Deep-Learning-and-AWS",
     bullets: [
       "Achieved 90%+ accuracy classifying 7 lesion types across 10,000+ images using a pretrained HuggingFace Vision Transformer and automated the pipeline (S3, Lambda, SageMaker, CloudWatch, IAM-secured access) with a Streamlit front-end for instant diagnoses.",
     ],

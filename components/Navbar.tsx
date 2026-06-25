@@ -3,15 +3,15 @@ import { navLinks, profile } from "@/lib/data";
 export default function Navbar() {
   return (
     <nav
-          style={{
-          maxWidth: 1160,
-          margin: "0 auto",
-          padding: "16px 40px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          gap: 32,          // ← add this line
-        }}
+      style={{
+        position: "sticky",
+        top: 0,
+        zIndex: 50,
+        backdropFilter: "saturate(180%) blur(12px)",
+        WebkitBackdropFilter: "saturate(180%) blur(12px)",
+        background: "rgba(250,249,247,0.82)",
+        borderBottom: "1px solid #ece9e3",
+      }}
     >
       <div
         style={{
@@ -21,6 +21,7 @@ export default function Navbar() {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
+          gap: 40,
         }}
       >
         <a
@@ -44,7 +45,9 @@ export default function Navbar() {
           >
             {profile.initials}
           </span>
-          <span style={{ fontWeight: 700, fontSize: 15, whiteSpace: "nowrap" }}>{profile.name}</span>
+          <span style={{ fontWeight: 700, fontSize: 15, whiteSpace: "nowrap" }}>
+            {profile.name}
+          </span>
         </a>
         <div
           style={{
