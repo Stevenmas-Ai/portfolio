@@ -64,7 +64,7 @@ export const projects: Project[] = [
     tags: ["AWS SageMaker", "HuggingFace", "AWS Lambda", "S3", "IAM", "CloudWatch", "Streamlit"],
   },
   {
-    title: "Vision Transformers for Semantic Segmentation",
+    title:"Vision Transformers for Semantic Segmentation in Autonomous Driving on India's Unstructured Roads",
     date: "Mar 2025",
     cover: "/assets/cover-segmentation.png",
     link: "https://github.com/Stevenmas-Ai/Comparative_analysis_of_vision_transformers_segformer_and_mask2Former_semantic_segmentation_IDD_lite",
