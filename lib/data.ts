@@ -84,7 +84,7 @@ export const projects: Project[] = [
     tags: ["Python", "PyTorch", "DQN", "Reinforcement Learning", "Jupyter Notebook"],
   },
   {
-    title: "Survivor Struggle — AI for Games",
+    title: "Survivor Struggle - AI for Games",
     date: "Mar 2025",
     cover: "/assets/cover-gameai.png",
     link: "https://github.com/Stevenmas-Ai/Survivor-Struggle---Artificial-Intelligence-for-Games",
@@ -97,7 +97,7 @@ export const projects: Project[] = [
 
 export const hackathons: Project[] = [
   {
-    title: "Prism — Crypto-Agile Post-Quantum Vault for Solana",
+    title: "Prism - Crypto-Agile Post-Quantum Vault for Solana",
     date: "May 2026",
     cover: "/assets/prism-team.jpg",
     coverPosition: "50% 40%",
@@ -114,7 +114,7 @@ export const hackathons: Project[] = [
     ],
   },
   {
-    title: "AdGuard AI — Brand Ad Safety Screening Agent",
+    title: "AdGuard AI - Brand Ad Safety Screening Agent",
     date: "Apr 2026",
     cover: "/assets/cover-adguard.png",
     link: "https://github.com/Stevenmas-Ai/AdGuard-AI-Lyzr-Hackathon",
@@ -128,7 +128,7 @@ export const hackathons: Project[] = [
     tags: ["Lyzr Studio", "Agentic RAG", "Claude Opus 4", "GPT-4.1", "GARM", "Lovable", "Slack", "Gmail"],
   },
   {
-    title: "Smart Pay — AI BNPL Recommender for SME Merchants",
+    title: "Smart Pay - AI BNPL Recommender for SME Merchants",
     date: "Feb 2025",
     cover: "/assets/cover-smartpay.png",
     link: "https://devpost.com/software/neural-net-worth-browser-extension",
