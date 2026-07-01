@@ -35,6 +35,7 @@ export default function ContactForm() {
     const payload = {
       name: String(data.get("name") || ""),
       email: String(data.get("email") || ""),
+      subject: String(data.get("subject") || ""),
       message: String(data.get("message") || ""),
     };
 

@@ -19,10 +19,10 @@ const mono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: `${profile.name} — AI Software Engineer`,
+  title: `${profile.name} - AI Software Engineer`,
   description: profile.intro,
   openGraph: {
-    title: `${profile.name} — AI Software Engineer`,
+    title: `${profile.name} - AI Software Engineer`,
     description: profile.intro,
     type: "website",
   },
