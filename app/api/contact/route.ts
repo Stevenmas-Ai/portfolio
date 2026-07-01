@@ -7,6 +7,7 @@ import { getSupabaseAdmin } from "@/lib/supabase";
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(120),
   email: z.string().trim().email("Enter a valid email").max(200),
+  subject: z.string().trim().max(200).optional(),
   message: z.string().trim().min(1, "Message is required").max(5000),
 });
 
@@ -33,7 +34,11 @@ export async function POST(request: Request) {
     const first = parsed.error.issues[0]?.message ?? "Please check your input.";
     return NextResponse.json({ error: first }, { status: 400 });
   }
-  const { name, email, message } = parsed.data;
+  const { name, email, subject, message } = parsed.data;
+  const emailSubject =
+    subject && subject.length > 0
+      ? subject
+      : `Portfolio contact from ${name}`;
 
   // 2. Best-effort backup to Supabase (never blocks the email)
   const supabase = getSupabaseAdmin();
@@ -60,12 +65,13 @@ export async function POST(request: Request) {
       from: process.env.CONTACT_FROM_EMAIL || "onboarding@resend.dev",
       to: process.env.CONTACT_TO_EMAIL || "stevenmasdev@gmail.com",
       replyTo: email,
-      subject: `Portfolio contact from ${name}`,
+      subject: emailSubject,
       html: `
         <div style="font-family:system-ui,sans-serif;line-height:1.6;color:#1c1a16">
           <h2 style="margin:0 0 12px">New portfolio message</h2>
           <p style="margin:0"><strong>Name:</strong> ${escapeHtml(name)}</p>
           <p style="margin:0"><strong>Email:</strong> ${escapeHtml(email)}</p>
+          ${subject ? `<p style="margin:0"><strong>Subject:</strong> ${escapeHtml(subject)}</p>` : ""}
           <hr style="border:none;border-top:1px solid #ece9e3;margin:16px 0" />
           <p style="white-space:pre-wrap;margin:0">${escapeHtml(message)}</p>
         </div>

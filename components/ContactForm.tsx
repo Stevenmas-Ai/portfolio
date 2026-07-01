@@ -108,6 +108,18 @@ export default function ContactForm() {
         />
       </div>
       <div style={fieldStyle}>
+        <label htmlFor="subject" style={labelStyle}>
+          Subject
+        </label>
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          placeholder="What's this about?"
+          style={inputStyle}
+        />
+      </div>
+      <div style={fieldStyle}>
         <label htmlFor="message" style={labelStyle}>
           Message
         </label>
